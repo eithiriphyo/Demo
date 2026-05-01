@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Demo Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0062bb, #00c6ff);
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      padding-top: 120px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: white;
+      color: #0062bb;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e6e6e6;
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>🚀 My First Demo Website</h1>
+    <p>Simple. Clean. Unique starter page.</p>
+    <button class="btn" onclick="showMessage()">Click Me</button>
+  </div>
+
+  <footer>
+    Built with ❤️ using HTML + CSS + JS
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("Hello! Your demo site is working 🎉");
+    }
+  </script>
+
+</body>
+</html>
