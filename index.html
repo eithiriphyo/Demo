@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Modern Animated Demo</title>
+  <title>Modern Demo Website</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -15,32 +15,38 @@
     }
 
     body {
-    background: #f3f4f6;
-    color: #111;
-    } 
+      background: #f3f4f6;
+      color: #111;
     }
 
+    /* NAVBAR */
     nav {
       display: flex;
       justify-content: space-between;
       padding: 20px 60px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
+      background: white;
       position: sticky;
       top: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
-    nav h2 { color: #00c6ff; }
+    nav h2 {
+      color: #0062bb;
+    }
 
     nav a {
-      color: white;
+      color: #333;
       margin-left: 20px;
       text-decoration: none;
-      opacity: 0.7;
+      font-weight: 500;
+      transition: 0.3s;
     }
 
-    nav a:hover { opacity: 1; }
+    nav a:hover {
+      color: #0062bb;
+    }
 
+    /* HERO */
     .hero {
       height: 90vh;
       display: flex;
@@ -49,14 +55,16 @@
       align-items: center;
       text-align: center;
       padding: 20px;
-      background: radial-gradient(circle at top, #1e3a8a, #0f172a);
+      background: linear-gradient(135deg, #ffffff, #e5e7eb);
     }
 
     .hero h1 {
       font-size: 50px;
     }
 
-    .hero span { color: #00c6ff; }
+    .hero span {
+      color: #0062bb;
+    }
 
     .hero p {
       max-width: 600px;
@@ -64,21 +72,24 @@
       margin: 15px 0;
     }
 
+    /* BUTTON */
     .btn {
       padding: 12px 25px;
       border-radius: 30px;
       border: none;
-      background: #00c6ff;
+      background: #0062bb;
+      color: white;
       cursor: pointer;
       font-weight: bold;
       transition: 0.3s;
     }
 
     .btn:hover {
-      background: white;
+      background: #004a99;
       transform: scale(1.05);
     }
 
+    /* SECTION */
     .section {
       padding: 80px 60px;
       text-align: center;
@@ -92,6 +103,7 @@
       margin-top: 40px;
     }
 
+    /* CARD */
     .card {
       width: 250px;
       padding: 20px;
@@ -110,10 +122,11 @@
     }
 
     .card:hover {
-      background: rgba(0,198,255,0.15);
+      background: #e0f2fe;
       transform: translateY(-10px);
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 20px;
@@ -124,21 +137,24 @@
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
   <h2>Main Menu</h2>
   <div>
     <a href="#">Home</a>
     <a href="#features">Features</a>
-    <a href="https://github.com/eithiriphyo" target="_blank">Contact</a>
+    <a href="https://eithiriphyo.github.io/Demo-website/" target="_blank">Contact</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Simple<span>Unique</span>Webiste</h1>
+  <h1>Simple <span> Unique</span> Website</h1>
   <p>This is my personal demo website hosted in AWS S3.</p>
   <button class="btn" onclick="alert('Welcome 🚀')">Get Started</button>
 </section>
 
+<!-- FEATURES -->
 <section class="section" id="features">
   <h2>Features</h2>
 
@@ -149,6 +165,7 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   Built with HTML + CSS + JS
 </footer>
