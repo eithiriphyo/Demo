@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Demo Website</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f3f4f6;
+      color: #111;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 60px;
+      background: white;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    nav h2 {
+      color: #0062bb;
+    }
+
+    nav a {
+      color: #333;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #0062bb;
+    }
+
+    /* HERO */
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #ffffff, #e5e7eb);
+    }
+
+    .hero h1 {
+      font-size: 50px;
+    }
+
+    .hero span {
+      color: #0062bb;
+    }
+
+    .hero p {
+      max-width: 600px;
+      opacity: 0.8;
+      margin: 15px 0;
+    }
+
+    /* BUTTON */
+    .btn {
+      padding: 12px 25px;
+      border-radius: 30px;
+      border: none;
+      background: #0062bb;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #004a99;
+      transform: scale(1.05);
+    }
+
+    /* SECTION */
+    .section {
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    /* CARD */
+    .card {
+      width: 250px;
+      padding: 20px;
+      border-radius: 15px;
+      background: white;
+      color: #111;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: 0.5s;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      background: #e0f2fe;
+      transform: translateY(-10px);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Main Menu</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#features">Features</a>
+    <a href="https://eithiriphyo.github.io/Demo-website/" target="_blank">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Simple <span> Unique</span> Website</h1>
+  <p>This is my personal demo website hosted in AWS S3.</p>
+  <button class="btn" onclick="window.location.href='https://eithiriphyo.github.io/Demo-website/'">
+  Get Started
+</button>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <h2>Features</h2>
+
+  <div class="cards">
+    <div class="card">👨‍💻 My Projects</div>
+    <div class="card">📚 Learning DevOps</div>
+    <div class="card">☁️ AWS Practice with S3</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  Built with HTML + CSS + JS
+</footer>
+
+<script>
+  // Scroll animation
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
